@@ -49,12 +49,3 @@ function handleInput(event) {
 }
 
 input.addEventListener('keyup', handleInput);
-
-// Access Key
-// GSNmk81zV1uXBW1mXOhUSe7SHoxRAk2JMNyuXf4Ri7Y
-
-// Secret Key
-// gS-ZMn_ckN0mcNWH9URjNdgc7a8podVitIhOgN2G8yo
-
-// Main API link
-// https://api.unsplash.com/search/photos/?query=mountain&client_id=GSNmk81zV1uXBW1mXOhUSe7SHoxRAk2JMNyuXf4Ri7Y
