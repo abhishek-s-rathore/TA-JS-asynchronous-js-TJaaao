@@ -12,16 +12,15 @@ function fetch(event) {
       );
 
       xhr.onload = function () {
-        console.log('one');
         let searchData = JSON.parse(xhr.response);
         imgContainer.innerHTML = '';
 
         searchData.results.forEach((elem, index) => {
-          console.log(elem);
           let div = document.createElement('div');
           div.classList.add('image-box');
           let img = document.createElement('img');
           img.setAttribute('alt', `Image of ${value}`);
+
           img.src = elem.urls.small;
 
           let dwd = document.createElement('a');
@@ -31,7 +30,7 @@ function fetch(event) {
           i.classList.add(`fas`, `fa-download`);
           dwd.classList.add('download');
           dwd.href = `${elem.urls.raw}`;
-          dwd.download = `${value}${index}.jpeg`;
+          dwd.download = `elem.urls.raw`;
           dwd.append(span, i);
           div.append(img, dwd);
           imgContainer.append(div);
