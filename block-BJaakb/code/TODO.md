@@ -1,10 +1,8 @@
-## XMLHttpRequest + Promise
+## Image Search App
 
-- Create a function named `fetch` which can accept one parameter an `url` and returns a promise.
-- Use `XMLHttpRequest` to make a network request using the `url` from parameter
-- When the data is loaded resolve the promise with the value
-- If there is any issue loading data reject the promise with an error message
-
-Add-on:
-
-- Refactor the image search app you created (in previous exercise) to use the function `fetch` you crated above.
+- This app will display a list of random images.
+- It will also have a search input.
+- When we search for anything, the images will change.
+- while hovering the images, we will find a download - icon.
+- We can also download the images.
+- We are using Promises in this App.
