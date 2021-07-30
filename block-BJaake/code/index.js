@@ -3,7 +3,6 @@ let root = document.querySelector('ul');
 let select = document.querySelector('select');
 let newS;
 
-
 function renderNews(news) {
   root.innerHTML = '';
   news.forEach((newsItem) => {
@@ -43,6 +42,7 @@ fetch(url)
   .then((response) => response.json())
   .then((news) => {
     renderNews(news);
+
     let allSites = Array.from(
       new Set(
         news.map((n) => {
@@ -51,15 +51,15 @@ fetch(url)
       )
     );
     renderInput(allSites);
-    newS = news;
-  }).catch((error) => { 
-      root.innerHTML = error;
-      root.style.textAlign =`center`;
-})
 
+    newS = news;
+  })
+  .catch((error) => {
+    root.innerHTML = error;
+    root.style.textAlign = `center`;
+  });
 
 select.addEventListener(`change`, (event) => {
-  console.log(event.target.value);
   let array = [];
 
   newS.forEach((val) => {
@@ -67,7 +67,6 @@ select.addEventListener(`change`, (event) => {
       array.push(val);
     }
   });
-  console.log(array);
 
   if (array.length === 0) {
     renderNews(newS);
@@ -75,3 +74,4 @@ select.addEventListener(`change`, (event) => {
     renderNews(array);
   }
 });
+
