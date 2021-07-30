@@ -19,6 +19,14 @@ const two = new Promise((resolve, reject) =>
 const three = new Promise((resolve, reject) =>
   setTimeout(() => resolve('John'), 3000)
 );
+
+let all = Promise.all([one.two, three])
+  .then((res) => console.log(res))
+  .catch((error) => console.log(error)); // Error: Whoops!
+
+let allSettled = Promise.allSettled([one.two, three])
+  .then((res) => console.log(res))
+  .catch((error) => console.log(error)); // Array of three objects with key of status and value;
 ```
 
 - What will be the output of the following code snippet? How much time will it take for the promise to resolve?
@@ -31,4 +39,6 @@ Promise.all([
   'Sam',
   { name: 'John' },
 ]).then(console.log);
+
+//  ['Arya', 'Sam', {name: 'John'}]  (After 1 second)
 ```
