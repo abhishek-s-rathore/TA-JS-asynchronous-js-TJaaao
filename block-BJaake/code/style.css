@@ -151,10 +151,10 @@ header {
   padding: 1rem;
 }
 h1 {
-  color: white;
+  color:#fff;
   text-align: center;
   font-size: 3rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 main {
   max-width: 1200px;
@@ -167,11 +167,16 @@ main {
   text-align: center;
   margin: 1rem auto;
 }
-input {
+select {
   height: 2.3rem;
   width: 300px;
   border: 1px solid black;
   border-radius: 0.25rem;
+  background-color: #fff;
+}
+
+select option {
+  background-color: lightgray;
 }
 
 ul {
@@ -180,53 +185,54 @@ ul {
 }
 
 li {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
 
-
 img {
   width: 100%;
   object-fit: cover;
+  height:100%;
 }
 
 .flex-40 {
   flex: 0 1 40%;
+  height: 200px;
 }
 
 .flex-58 {
   flex: 0 1 58%;
 }
 
-h2{
-    display:inline-block;
-    background-color:mediumseagreen;
-    color:#fff;
-    font-weight: 800;
-    padding: .3rem .8rem;
-    border-radius: 1rem;
-    margin:1rem ;
-    text-transform: uppercase;
+h2 {
+  display: inline-block;
+  background-color: mediumseagreen;
+  color: #fff;
+  font-weight: 800;
+  padding: 0.3rem 0.8rem;
+  border-radius: 1rem;
+  margin: 1rem;
+  text-transform: uppercase;
 }
 
-h3{
-    font-size: 1.6rem;
-    font-weight: 700;
-    margin:0 1rem;
+h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 1rem;
 }
 
-a{
-    display:inline-block;
-    background-color:black;
-    color:white;
-    padding:.4rem .8rem;
-    text-decoration: none;
-    border-radius:.25rem;
-    margin: 1rem;
+a {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  margin: 1rem;
 }
 
-a:hover{
-    background-color:rgba(0,0,0,.6);
+a:hover {
+  background-color: rgba(0, 0, 0, 0.6);
 }
